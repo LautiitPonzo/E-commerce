@@ -5,12 +5,10 @@ const Contador = ({init,stock,onAdd}) => {
     const [confirmado, setConfirmado] = useState(false);
 
     const sumar = () => {
-        setConfirmado(false);
         setContador(contador + 1);
     }
 
     const restar = () => {
-        setConfirmado(false);
         setContador(contador - 1);
     }
 
@@ -21,6 +19,7 @@ const Contador = ({init,stock,onAdd}) => {
     if(!confirmado) {
         return (
             <div>
+                <p>Productos a comprar : {contador}</p>
                 <button onClick={sumar} className="material-icons">add</button>
                 <button onClick={restar} className="material-icons">remove</button>
                 <button onClick={confirmar}>Confirmar</button>
@@ -29,7 +28,7 @@ const Contador = ({init,stock,onAdd}) => {
     }else{
         return(
             <div>
-                <p>Productos a comprar: {contador}</p>
+                <p>Productos a comprar : {contador}</p>
                 <button onClick={sumar} className="material-icons">add</button>
                 <button onClick={restar} className="material-icons">remove</button>
                 <button onClick={confirmar}>confirmar</button>
@@ -39,3 +38,5 @@ const Contador = ({init,stock,onAdd}) => {
     }
 
 }
+
+export default Contador;

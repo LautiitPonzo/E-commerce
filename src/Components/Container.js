@@ -52,13 +52,14 @@ const Container = () => {
         })
     } , []);
 
-    const onAdd = (cantidad) => {
-        console.log(cantidad);
+    const onAdd = () => {
     }
 
     return (
         <>
-            <Contador init={0} stock={productos.length} onAdd={onAdd} />
+            <Contador init={0} stock={10} onAdd={onAdd} />
         </>
     )
 }
+
+export default Container;

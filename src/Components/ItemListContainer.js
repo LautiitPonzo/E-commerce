@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import Productos from "./productos.json"
+import productosIniciales from "./productos.json"
 import { BeatLoader } from "react-spinners";
 import { toast } from "react-toastify";
 
@@ -13,14 +13,14 @@ const ItemListContainer = () => {
 
     const pedido = new Promise ((res) => {
       setTimeout(() => {
-        res(Productos);
-      }, 5000);
+        res(productosIniciales);
+      }, 500);
   })
 
   pedido.then(res => {
     console.log("Termino el pedido bien");
     setCargando(false);
-    setProductos(Productos);
+    setProductos(productosIniciales);
     toast.dismiss();
     toast.success("Productos cargados");
   })
@@ -39,4 +39,4 @@ const ItemListContainer = () => {
     }
 }
 
-export default  ItemListContainer;
+export default ItemListContainer;
