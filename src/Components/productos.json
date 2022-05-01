@@ -4,55 +4,55 @@
         "nombre": "Remera",
         "precio": "100",
         "categorias": ["remeras"],
-        "imagen": "",
+        "imagen": "https://www.mismarcas.com/wp-content/uploads/2019/10/camiseta-mismarcas-nike-air-max-1-negra-1.jpg",
         "descripcion": "Remera de hombre",
         "stock": "10"
     },
     {
         "id": "2",
-        "nombre": "Remera",
+        "nombre": "Pantalon",
         "precio": "100",
-        "categorias": ["remeras"],
-        "imagen": "",
+        "categorias": ["pantalones"],
+        "imagen": "https://www.mismarcas.com/wp-content/uploads/2019/10/camiseta-mismarcas-nike-air-max-1-negra-1.jpg",
         "descripcion": "Remera de hombre",
         "stock": "10"
     },
     {
         "id": "3",
-        "nombre": "Remera",
+        "nombre": "Buzo",
         "precio": "100",
-        "categorias": ["remeras"],
-        "imagen": "",
+        "categorias": ["buzos"],
+        "imagen": "https://www.mismarcas.com/wp-content/uploads/2019/10/camiseta-mismarcas-nike-air-max-1-negra-1.jpg",
         "descripcion": "Remera de hombre",
         "stock": "10"
     },
 
     {
         "id": "4",
-        "nombre": "Remera",
+        "nombre": "Zapatos",
         "precio": "100",
-        "categorias": ["remeras"],
-        "imagen": "",
+        "categorias": ["zapatos"],
+        "imagen": "https://www.mismarcas.com/wp-content/uploads/2019/10/camiseta-mismarcas-nike-air-max-1-negra-1.jpg",
         "descripcion": "Remera de hombre",
         "stock": "10"
     },
 
     {
         "id": "5",
-        "nombre": "Remera",
+        "nombre": "Zapatillas",
         "precio": "100",
-        "categorias": ["remeras"],
-        "imagen": "",
+        "categorias": ["Zapatillas"],
+        "imagen": "https://www.mismarcas.com/wp-content/uploads/2019/10/camiseta-mismarcas-nike-air-max-1-negra-1.jpg",
         "descripcion": "Remera de hombre",
         "stock": "10"
     },
 
     {
         "id": "6",
-        "nombre": "Remera",
+        "nombre": "Sandalia",
         "precio": "100",
-        "categorias": ["remeras"],
-        "imagen": "",
+        "categorias": ["sandalias"],
+        "imagen": "https://www.mismarcas.com/wp-content/uploads/2019/10/camiseta-mismarcas-nike-air-max-1-negra-1.jpg",
         "descripcion": "Remera de hombre",
         "stock": "10"
     }

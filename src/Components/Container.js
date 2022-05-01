@@ -1,65 +1,71 @@
-import { useEffect, useState } from "react";
-import Contador from "./Contador";
+import { useEffect, useState } from "react"
+import Contador from "./Contador"
 
-const baseDeDatos = [
-    {
-        id: 1,
-        nombre: "Producto 1",
-        precio: 100,
-    },
-    {
-        id: 2,
-        nombre: "Producto 2",
-        precio: 200,
-    },
-    {
-        id: 3,
-        nombre: "Producto 3",
-        precio: 300,
-    },
-    {
-        id: 4,
-        nombre: "Producto 4",
-        precio: 400,
-    },
-    {
-        id: 5,
-        nombre: "Producto 5",
-        precio: 500,
-    },
-    {
-        id: 6,
-        nombre: "Producto 6",
-        precio: 600,
-    }
-];
+const productosDeBaseDeDatos = [
+  {
+    id: 1,
+    nombre: "Producto 1",
+    precio: 100
+  },
+  {
+    id: 2,
+    nombre: "Producto 2",
+    precio: 200
+  },
+  {
+    id: 3,
+    nombre: "Producto 3",
+    precio: 300
+  }
+]
+
+
 
 
 const Container = () => {
-    const [productos, setProductos] = useState([]);
 
-    useEffect(() => {
-        const promesa = new Promise((res, rej) => {
-            res(baseDeDatos);
-        })
+  const [productos, setProductos] = useState([])
 
-        .then((contenido) => {
-            console.log(("Termino el pedido bien"));
-        })
+  useEffect(() => {
 
-        .catch((error) => {
-            console.log(("Error en el pedido"));
-        })
-    } , []);
+    //console.log("Pido productos...")
+    const promesa = new Promise((res, rej) => {
+      res(productosDeBaseDeDatos)
+      //rej("Hubo un error")
+    })
 
-    const onAdd = () => {
-    }
+      .then((contenido) => {
+        console.log("Salio todo Bien")
+      })
+      .catch((error) => {
+        console.log("Salio todo Mal")
+      })
 
-    return (
-        <>
-            <Contador init={0} stock={10} onAdd={onAdd} />
-        </>
-    )
+    /* setTimeout(() => {
+      
+      console.log("Recibo Productos!")
+      console.log(productosIniciales)
+      setProductos(productosDeBaseDeDatos)
+    }, 2000) */
+
+  }, [])
+
+  const onAdd = () => {
+
+  }
+
+  return (
+    <>
+      <Contador stock={10} init={0} onAdd={onAdd} />
+      {/* <ItemList productos={productos}/> */}
+      {/* <ul>
+        {productos.map((producto)=>{
+          //console.log(producto,indice)
+          return <li key={producto.id} >{producto.nombre}</li>
+        })}
+      </ul> */}
+    </>
+  )
 }
 
-export default Container;
+export default Container
