@@ -1,4 +1,4 @@
-import Item from "./Item"
+import ItemCount from "./ItemCount"
 
 const ItemList = ({productos}) => {
 
@@ -6,7 +6,7 @@ const ItemList = ({productos}) => {
     <section className="card-container">
       {productos.map(producto=>{
         return(
-          <Item key={producto.id} producto={producto}/>
+          <ItemCount key={producto.id} producto={producto}/>
         )
       })}
     </section>
