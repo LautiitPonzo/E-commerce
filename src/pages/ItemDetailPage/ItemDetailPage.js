@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import ItemCount from "../../components/ItemCount/ItemCount";
 import Loading from "../../components/Loading/Loading";
 import CartContext from "../../contexts/cartContext";
+import { getFirestore } from "../../firebase";
+
 import "./ItemDetailPage.scss";
 
 const ItemDetailPage = ({ onAdd }) => {
@@ -12,6 +14,33 @@ const ItemDetailPage = ({ onAdd }) => {
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
+  useEffect(() => {
+    let isSubscribed = true;
+    const db = getFirestore();
+    const itemCollection = db.collection("items");
+    const item = itemCollection.doc(id);
+
+    item
+      .get()
+      .then((doc) => {
+        if (!doc.exists) {
+          console.log("Item does not exist!");
+          return;
+        }
+        if (isSubscribed) {
+          console.log("Item found!");
+          setProduct({ id: doc.id, ...doc.data() });
+        }
+      })
+      .catch((error) => {
+        console.log("Error searching items", error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+
+    return () => (isSubscribed = false);
+  }, [id]);
 
   useEffect(() => {
     setArticle(product);
@@ -87,7 +116,7 @@ const ItemDetailPage = ({ onAdd }) => {
                 </div>
               </div>
             </div>
-            {/* descripcion */}
+            {/* DESCRIPTION */}
             <div className="col-sm-12 col-md-8 itemPage__detail-description">
               <div className="itemPage__details">
                 <h3>Características:</h3>
