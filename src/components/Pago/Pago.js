@@ -1,7 +1,7 @@
 import React from "react";
 import "./Pago.scss";
 
-const Payments = () => {
+const Pago = () => {
   return (
     <div className="payments">
       <div className="payments__title">
@@ -31,4 +31,4 @@ const Payments = () => {
   );
 };
 
-export default Payments;
+export default Pago;

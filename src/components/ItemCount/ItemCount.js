@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import RemoveIcon from "@material-ui/icons/Remove";
+import AddIcon from "@material-ui/icons/Add";
+
 import "./ItemCount.scss";
 
 const ItemCount = ({ initial, min, max, setQuantity }) => {
@@ -21,14 +24,18 @@ const ItemCount = ({ initial, min, max, setQuantity }) => {
       <div className="counter__content">
         <div className="counter__content-controls">
           <span
-            className="counter__content-controls-subtract material-icons"
+            className="counter__content-controls-subtract"
             onClick={handleDecrement}
-          >delete</span>
+          >
+            <RemoveIcon />
+          </span>
           <span className="counter__content-controls-value"> {counter} </span>
           <span
-            className="counter__content-controls-add material-icons"
+            className="counter__content-controls-add"
             onClick={handleIncrement}
-          >add</span>
+          >
+            <AddIcon />
+          </span>
         </div>
       </div>
     </div>

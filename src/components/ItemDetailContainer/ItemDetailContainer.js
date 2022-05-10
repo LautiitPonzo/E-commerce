@@ -26,6 +26,7 @@ const ItemDetailContainer = ({ product, onAdd }) => {
       .catch(() => console.log("rejected"));
 
     return () => (isSubscribed = false);
+    //  eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return loading ? (

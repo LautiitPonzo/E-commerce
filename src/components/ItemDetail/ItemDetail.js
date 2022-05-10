@@ -2,7 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import Item from "../Item/Item";
 import CartContext from "../../contexts/cartContext";
+
 import "./ItemDetail.scss";
+import { Button } from "@material-ui/core";
 
 const ItemDetail = ({ product }) => {
   const { setCart, setQnt } = useContext(CartContext);
@@ -38,8 +40,6 @@ const ItemDetail = ({ product }) => {
       description: article.description,
       stock: article.stock,
       price: article.price,
-      brand: article.brand,
-      model: article.model,
       quantity: article.quantity,
       gender: article.gender,
       image: article.image,
@@ -57,12 +57,15 @@ const ItemDetail = ({ product }) => {
         max={product.stock}
         setQuantity={setQuantity}
       />
-      <span
-        className="material-icons item-detail__btn"
+      <Button
         variant="contained"
         color="primary"
+        style={styleButtom}
         onClick={handleClick}
-      >add_shopping_cart{quantity}</span>
+        className="item-detail__btn"
+      >
+        Agregar al carrito {quantity}
+      </Button>
     </div>
   );
 };
