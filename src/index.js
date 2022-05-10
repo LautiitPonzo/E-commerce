@@ -1,7 +1,7 @@
 // 1) Tener la variable react en scope
 import React from 'react'
 import App from './App'
-import './style.scss'
+import "./index.scss"
 
 // 2) Tener la variable react-dom en scope
 import ReactDom from 'react-dom/client'
