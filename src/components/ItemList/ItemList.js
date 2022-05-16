@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import Loading from "../Loading/Loading";
-import { getFirestore } from "../../firebase";
-import { Link } from "react-router-dom";
+import { db } from "../../firebase";
 
 import "./ItemList.scss";
+import { Link } from "react-router-dom";
 
 const ItemList = ({ onAdd }) => {
   const [products, setProducts] = useState([]);
@@ -12,8 +12,8 @@ const ItemList = ({ onAdd }) => {
 
   useEffect(() => {
     setLoading(true);
-    const db = getFirestore();
-    const itemCollection = db.collection("items");
+    const firebase = db();
+    const itemCollection = firebase.collection("items");
 
     itemCollection
       .get()
@@ -44,9 +44,9 @@ const ItemList = ({ onAdd }) => {
         <div className="list-container__details">
           <div className="list-container__details-categories">
             <h2>Categorías</h2>
-            <Link to="/categories/futbol">Fútbol</Link>
-            <Link to="/categories/natacion">Natación</Link>
-            <Link to="/categories/basket">Basket</Link>
+            <Link to="categories/remera">Remera</Link>
+            <Link to="categories/camisa">Camisa</Link>
+            <Link to="categories/buzo">Buzo</Link>
           </div>
           <div className="list-container__details-title">
             <h3>Productos</h3>

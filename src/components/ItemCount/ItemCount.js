@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import RemoveIcon from "@material-ui/icons/Remove";
-import AddIcon from "@material-ui/icons/Add";
+import { Add, Remove} from "@mui/icons-material";
+
 
 import "./ItemCount.scss";
 
@@ -27,14 +27,14 @@ const ItemCount = ({ initial, min, max, setQuantity }) => {
             className="counter__content-controls-subtract"
             onClick={handleDecrement}
           >
-            <RemoveIcon />
+            <Remove/>
           </span>
           <span className="counter__content-controls-value"> {counter} </span>
           <span
             className="counter__content-controls-add"
             onClick={handleIncrement}
           >
-            <AddIcon />
+            <Add/>
           </span>
         </div>
       </div>

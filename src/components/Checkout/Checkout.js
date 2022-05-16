@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+
 import CartContext from "../../contexts/cartContext";
 import "./Checkout.scss";
 
@@ -24,7 +25,7 @@ const Checkout = () => {
         <div className="card-body">
           <h5 className="card-title">Total: ${totalPrice}</h5>
           <p className="card-text">Para continuar haz click en el botón.</p>
-          <Link to="/form" className="btn btn-primary">
+          <Link to="form" className="btn btn-primary">
             Realizar compra
           </Link>
         </div>

@@ -1,5 +1,5 @@
+import { GitHub } from "@mui/icons-material";
 import React, { Component } from "react";
-import { GitHub  } from "@material-ui/icons";
 import "./Footer.scss";
 
 class Footer extends Component {
@@ -8,7 +8,7 @@ class Footer extends Component {
       <footer>
       <div className="social">
         <a className="social-github" href="https://github.com/LautiitPonzo" target="blank">
-          <GitHub color="secondary" fontSize="large" className="social-icons" />
+          <GitHub color="secondary" fontSize="large" className="social-icons"/>
         </a>
       </div>
 

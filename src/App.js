@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { BrowserRouter, Router, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import CssBaseline from "@material-ui/core/CssBaseline";
+import { Router, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import ItemDetailPage from "./pages/ItemDetailPage/ItemDetailPage";
 import CartContext from "./contexts/cartContext";
+import { CssBaseline } from "@mui/material";
 
 function App() {
   const [cart, setCart] = useState([]);

@@ -4,7 +4,7 @@ import Item from "../Item/Item";
 import CartContext from "../../contexts/cartContext";
 
 import "./ItemDetail.scss";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 
 const ItemDetail = ({ product }) => {
   const { setCart, setQnt } = useContext(CartContext);
@@ -65,7 +65,7 @@ const ItemDetail = ({ product }) => {
         className="item-detail__btn"
       >
         Agregar al carrito {quantity}
-      </Button>
+        </Button>
     </div>
   );
 };

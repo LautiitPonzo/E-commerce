@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import CartContext from "../../contexts/cartContext";
-import Badge from "@material-ui/core/Badge";
+import { ShoppingCart } from "@mui/icons-material";
+import { Badge } from "@mui/material";
 
 const CartIcon = () => {
   const { cart, qnt, setQnt } = useContext(CartContext);
@@ -14,7 +14,7 @@ const CartIcon = () => {
 
   return (
     <Badge badgeContent={qnt} color="secondary">
-      <ShoppingCartIcon fontSize="large" />
+      <ShoppingCart />
     </Badge>
   );
 };

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemCount from "../../components/ItemCount/ItemCount";
 import Loading from "../../components/Loading/Loading";
 import CartContext from "../../contexts/cartContext";
-import { getFirestore } from "../../firebase";
+import { getFirestore } from "firebase/firestore";
 
 import "./ItemDetailPage.scss";
 
