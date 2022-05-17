@@ -25,7 +25,7 @@ const ItemList = ({ onAdd }) => {
           querySnapshot.docs.map((doc) => {
             return { id: doc.id, ...doc.data() };
           })
-        );
+          );
       })
       .catch((error) => {
         console.log("Error searching items", error);

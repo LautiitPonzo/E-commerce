@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Add, Remove} from "@mui/icons-material";
-
-
 import "./ItemCount.scss";
 
 const ItemCount = ({ initial, min, max, setQuantity }) => {
