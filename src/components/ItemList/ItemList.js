@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import Loading from "../Loading/Loading";
-import { db } from "../../firebase";
-
-import "./ItemList.scss";
+import { getFirestore } from "../../firebase";
 import { Link } from "react-router-dom";
+import "./ItemList.scss";
 
 const ItemList = ({ onAdd }) => {
   const [products, setProducts] = useState([]);
@@ -12,14 +11,14 @@ const ItemList = ({ onAdd }) => {
 
   useEffect(() => {
     setLoading(true);
-    const firebase = db();
-    const itemCollection = firebase.collection("items");
+    const db = getFirestore();
+    const itemCollection = db.collection("items");
 
     itemCollection
       .get()
       .then((querySnapshot) => {
         if (querySnapshot.size === 0) {
-          console.log("No results!");
+          console.log("No hay resultados!");
         }
         setProducts(
           querySnapshot.docs.map((doc) => {
@@ -28,7 +27,7 @@ const ItemList = ({ onAdd }) => {
           );
       })
       .catch((error) => {
-        console.log("Error searching items", error);
+        console.log("Error al buscar el producto", error);
       })
       .finally(() => {
         setLoading(false);

@@ -1,19 +1,3 @@
-// import * as firebase from "firebase/app";
-// import { getFirestore } from "firebase/firestore";
-
-// import { firebaseConfig } from "../config/firebase.config";
-
-// const app = firebase.initializeApp(firebaseConfig);
-
-// export function getFirebase() {
-//   return app;
-// }
-
-// export function getFirestore() {
-//   return firebase.firestore(app);
-// }
-
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 
 import { getFirestore } from "firebase/firestore";
